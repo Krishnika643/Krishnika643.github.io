@@ -1,2 +1,14 @@
-# My_Krishnika643.github.io
-created for publishing my portfolio 
+# Krishnika Portfolio
+
+Welcome to my professional portfolio website.
+
+## Skills
+- HTML
+- Markdown
+- Biotechnology knowledge
+- Laboratory Skills
+- certifications
+
+## Projects
+Details available on my website: [Portfolio](https://Krishnika643.github.io)
+
