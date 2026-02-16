@@ -12,9 +12,11 @@
 <body>
 
 <header>
+    <div class="header-overlay">
     <h1>Krishnika</h1>
     <p class="tagline">Decoding Life Through Data & Algorithms</p>
-    <p>Undergraduate | Biotechnology Enthusiast | IT Learner</p>
+    <p>Future Bioinformatician | Decoding Biologican Data | Exploring Genoomes Through Code</p>
+    </div>    
 </header>
 
 <nav>
@@ -25,6 +27,7 @@
     <a href="#skills">Skills</a>
     <a href="#hobbies">Interests</a>
     <a href="#contact">Contact</a>
+    <button id="darkModeToggle">🌙</button>
 </nav>
 
 <section id="about">
@@ -130,6 +133,47 @@ I don’t just want to study life—I want to build the algorithms that help us 
     <p><strong>— Krishnika</strong></p>
     <p>© 2026 Krishnika. All Rights Reserved.</p>
 </footer>
+    
+    <script>
+const text = [
+"Future Bioinformatician",
+"Decoding Biological Data",
+"Exploring Genomes Through Code"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+function type() {
+    if (count === text.length) {
+        count = 0;
+    }
+
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector(".typing").textContent = letter;
+
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1200);
+    } else {
+        setTimeout(type, 60);
+    }
+}
+
+type();
+</script>
+
+    <script>
+const toggle = document.getElementById("darkModeToggle");
+toggle.onclick = function() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
