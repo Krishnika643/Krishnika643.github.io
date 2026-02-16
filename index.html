@@ -14,6 +14,7 @@
 <header>
     <div class="header-overlay">
     <h1>Krishnika</h1>
+    <p class="typing" id="typingText"></p>    
     <p class="tagline">Decoding Life Through Data & Algorithms</p>
     <p>Future Bioinformatician | Decoding Biologican Data | Exploring Genoomes Through Code</p>
     </div>    
@@ -133,39 +134,20 @@ I don’t just want to study life—I want to build the algorithms that help us 
     <p><strong>— Krishnika</strong></p>
     <p>© 2026 Krishnika. All Rights Reserved.</p>
 </footer>
-    
+
     <script>
-const text = [
-"Future Bioinformatician",
-"Decoding Biological Data",
-"Exploring Genomes Through Code"
-];
-
-let count = 0;
+const text = "Future Bioinformatician |Decoding Biologican Data |Exploring Genoomes Through Code ";
 let index = 0;
-let currentText = "";
-let letter = "";
 
-function type() {
-    if (count === text.length) {
-        count = 0;
-    }
-
-    currentText = text[count];
-    letter = currentText.slice(0, ++index);
-
-    document.querySelector(".typing").textContent = letter;
-
-    if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        setTimeout(type, 1200);
-    } else {
-        setTimeout(type, 60);
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typingText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 60);
     }
 }
 
-type();
+typeEffect();
 </script>
 
     <script>
