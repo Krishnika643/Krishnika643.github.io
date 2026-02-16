@@ -13,16 +13,29 @@ body {
     margin: 0;
     background-color: #f4f6f8;
     color: #333;
+    scroll-behavior: smooth;
     line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
+h1, h2, h3 {
+    margin-top: 0;
 }
 
+header {
+    background: url('dna.jpg') center/cover no-repeat;
+    height: 320px;
+    position: relative;
+    color: white;
+}
+
+.header-overlay {
+    background: rgba(15, 32, 39, 0.75);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 header h1 {
     font-size: 40px;
     letter-spacing: 2px;
@@ -34,6 +47,13 @@ header p {
     opacity: 0.9;
 }
 
+.typing {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00f5d4;
+    margin-top: 10px;
+}
+
 .tagline {
     font-style: italic;
     opacity: 0.9;
@@ -41,18 +61,16 @@ header p {
 }
 
 nav {
-    background-color: white;
+   background-color: #1f2a38;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    z-index: 1000;
+    z-index: 1000; 
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
+    color: white;
     text-decoration: none;
     margin: 15px;
     font-weight: 600;
@@ -71,8 +89,23 @@ nav a::after {
 }
 
 nav a:hover::after {
-    color: #2c5364;
+    color: #00f5d4;
     width: 100%;
+}
+
+#darkModeToggle {
+    background: #00f5d4;
+    color: #0f2027;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+#darkModeToggle:hover {
+    background: #00c9a7;
 }
 
 section {
@@ -107,7 +140,7 @@ h2 {
     display: block;
     margin: 15px auto;
     border-radius: 50%;
-    border: 4px solid #2c5364;
+    border: 4px solid #00f5d4;
     transition: 0.3s;
 }
 
@@ -136,16 +169,16 @@ li {
 
 .hobby {
     margin-bottom: 20px;
-    padding: 15px;
-    border-left: 4px solid #2c5364;
+    padding: 20px;
+    border-left: 5px solid #00f5d4; 
     background: #f9fbfc;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
 .hobby:hover {
     transform: translateX(6px);
-    background: #eef5f7;
+    background: #eef7fb;
 }
 
 .hobby h3 {
@@ -155,13 +188,35 @@ li {
 
 .hobby i {
     margin-right: 8px;
-    color: #2c5364;
+    color: #00c9a7;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #1f2a38;
     color: white;
-    margin-top: 30px;
+    margin-top: 40px;
 }
+
+.dark-mode {
+    background-color: #0f2027;
+    color: #e0e0e0;
+}
+
+.dark-mode section {
+    background-color: #1b263b;
+}
+
+.dark-mode nav {
+    background-color: #0f2027;
+}
+
+.dark-mode footer {
+    background-color: #0f2027;
+}
+
+.dark-mode .hobby {
+    background-color: #223;
+}
+
